@@ -1,23 +1,39 @@
-import languages from "../../languages"
-import LanguageCard from "./LanguageCard"
+
+import languages from "../../languages";
+import LanguageCard from "./LanguageCard";
 
 const LanguageList = () => {
+    
+  // stato: linguaggio selezionato
+  //const [selectedLanguage, setSelectedLanguage] = useState(languages[0]);
 
-    const renderLanguageCard = () => {
-        return languages.map((language) => (
-            <LanguageCard key={language.id}
-            language={language}/>
-        ))
-    }
+  return (
+    <>
+      {/* bottoni */}
+      <div className="buttons-row">
+        {languages.map((language) => (
+          <button
+            key={language.id}
+            className="btn-lang"
+          >
+            {language.title}
+          </button>
+          
+        ))}
+      </div>
 
-    return (
-        <div className="language-list">
-            {renderLanguageCard()}
-        </div>
-    )
+      {/* card */}
+      <div className="language-list">
+        {languages.map((language) => (
+      <LanguageCard key={language.id}
+      language={language}
+      />
+        ))}
+    </div>
+     </>
+  
+  );
+};
 
-}
 
-console.log(LanguageList); 
-
-export default LanguageList
+export default LanguageList;
