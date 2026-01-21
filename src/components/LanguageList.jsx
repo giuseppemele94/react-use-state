@@ -4,7 +4,7 @@ import LanguageCard from "./LanguageCard";
 
 const LanguageList = () => {
 
-    // selectedLanguage : linguaggio attualmente selezionato 
+    // selectedLanguage : è lo stato che contiene il linguaggio attualmente selezionato 
     // setSelectedLanguage : funzione per cambiarlo 
     // languages[0]
     //imposto inizialmente il primo linguaggio dell'array che sarà il primo
@@ -18,7 +18,8 @@ const LanguageList = () => {
                 {languages.map((language) => (
                     <button
                         key={language.id}
-                        className= {selectedLanguage?.id === language.id ? "btn-lang active" : 
+                        //se l'id del linguaggio selezionato corrisponde all'id del bottone aggiungi la classe active 
+                        className={selectedLanguage?.id === language.id ? "btn-lang active" :
                             "btn-lang"}
                         //al cluick del pulsante , la funzione setSelectedLanguage 
                         //aggiorna lo stato con il linguaggio cliccato 
@@ -33,12 +34,12 @@ const LanguageList = () => {
             {/* card */}
             <div className="language-list">
                 {/*Card che mostra il linguaggio selezionato ,la variabiile
-      selectedLanguage viene aggiornata automaticamente da React */}
+                 selectedLanguage viene aggiornata automaticamente da React */}
                 {selectedLanguage ? (
-                    <LanguageCard language={selectedLanguage} />) : 
+                    <LanguageCard language={selectedLanguage} />) :
                     (
-                    <p>Nessun linguaggio selezionato</p>
-                )}
+                        <p>Nessun linguaggio selezionato</p>
+                    )}
 
 
             </div>
