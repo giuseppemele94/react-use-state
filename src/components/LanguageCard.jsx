@@ -4,7 +4,7 @@ function LanguageCard(props) {
     const {title, description} = props.language; 
 
     return (
-        <div>
+        <div className="language-card">
         <h3>{title}</h3>
         <p>{description}</p>
         </div>

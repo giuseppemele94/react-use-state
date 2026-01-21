@@ -11,7 +11,7 @@ const LanguageList = () => {
     }
 
     return (
-        <div>
+        <div className="language-list">
             {renderLanguageCard()}
         </div>
     )
