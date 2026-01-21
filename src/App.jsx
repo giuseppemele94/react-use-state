@@ -1,10 +1,11 @@
+import LanguageList from "./components/LanguageList"
 
 function App() {
 
 
   return (
     <>
-      <h1>Ciao</h1>
+      <LanguageList/>
     </>
   )
 }
