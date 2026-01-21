@@ -18,7 +18,8 @@ const LanguageList = () => {
                 {languages.map((language) => (
                     <button
                         key={language.id}
-                        className="btn-lang"
+                        className= {selectedLanguage?.id === language.id ? "btn-lang active" : 
+                            "btn-lang"}
                         //al cluick del pulsante , la funzione setSelectedLanguage 
                         //aggiorna lo stato con il linguaggio cliccato 
                         onClick={() => setSelectedLanguage(language)}

@@ -55,6 +55,10 @@
   font-weight: 600;
 }
 
+ .btn-lang.active {
+  background-color: #ffc107;
+  color: #000;
+}
 h1 {
   justify-self: center;
 }
